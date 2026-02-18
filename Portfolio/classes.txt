@@ -1,0 +1,28 @@
+
+            <div className="w-full h-[651px] bg-slate-800 bg-gradient-custom min-h-screen flex flex-col items-center overflow-x-hidden">
+                {/* Aapka content yahan ayega */}
+            </div>
+             <button className="bg-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-300 shadow-[0_0_10px_rgba(59,130,246,0.4)] hover:shadow-[0_0_25px_rgba(59,130,246,0.8)] transition-all duration-300 transform hover:-translate-y-1 shadow-[0_4px_14px_0_rgba(59,130,246,0.5)] hover:shadow-[0_10px_25px_0_rgba(59,130,246,0.7)]">ssss</button>
+    
+
+
+
+
+
+ ye class blocks ka bg or shadow or hover shadow specify krti hai
+    bg-gradient-to-br from-[#1e293b] to-[#334155] backdrop-blur-md border border-white/10 shadow-[0_10px_15px_-3px_rgba(0,0,0,0.2)] transition-all duration-300 hover:shadow-[0_20px_25px_-5px_rgba(51,65,85,0.9)]
+
+
+
+
+
+
+
+
+
+
+
+
+    git add .
+git commit -m "updated my project"
+git push origin main

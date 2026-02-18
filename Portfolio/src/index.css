@@ -1,0 +1,457 @@
+@import "tailwindcss";
+/* CSS START - Saari styling yahan hai */
+/* --- Navbar Styling --- */
+/* Body mein ye do lines lazmi add karein */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Ye poori site ki right-side bar khatam kar dega */
+    width: 100%;
+}
+
+/* Navbar container ko simplify karein */
+.nav-container {
+    position: fixed;
+    top: 0;
+    width: 100%; /* left/right 0 ke bajaye sirf width 100% */
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+/* Is class ko check karein, padding width barha sakti hai */
+.nav-content {
+    width: 95%; /* 90% se thoda barha dein taake gaps kam hon mobile par */
+    max-width: 1200px; /* Bara screen par control rahega */
+    box-sizing: border-box; /* Padding ko andar rakhega */
+}
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 22px;
+    color: white;
+}
+
+.logo-icon {
+    background: #3b82f6;
+    color: white;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+.contact-btn {
+    color: white !important;
+    padding: 8px 20px !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+}
+
+/* Screen responsive fix */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    /* Mobile par links hide ho jayenge */
+}
+
+:root {
+    --bg-dark: #020617;
+    --text-main: #f8fafc;
+    --orbit-color: rgba(148, 163, 184, 0.2);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', system-ui, sans-serif;
+   display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Ab content top se shuru hoga */
+    overflow-x: hidden;
+}
+
+@keyframes counter-rotate-inner {
+    from {
+        transform: translate(-50%, -50%) rotate(var(--start-angle)) translateX(165px) rotate(calc(-1 * var(--start-angle)));
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(calc(var(--start-angle) + 360deg)) translateX(165px) rotate(calc(-1 * (var(--start-angle) + 360deg)));
+    }
+}
+
+@keyframes counter-rotate-outer {
+    from {
+        transform: translate(-50%, -50%) rotate(var(--start-angle)) translateX(250px) rotate(calc(-1 * var(--start-angle)));
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(calc(var(--start-angle) + 360deg)) translateX(250px) rotate(calc(-1 * (var(--start-angle) + 360deg)));
+    }
+}
+
+.main-container {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 1.2s ease-out;
+}
+
+/* Center Image Frame (Prashant) */
+.profile-frame {
+    position: absolute;
+    z-index: 10;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    overflow: hidden;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-frame img {
+    position: absolute;
+    top: 16%;
+    /* Adjusts vertical position like Screenshot 2 */
+    height: 425px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Orbit Background SVG */
+.orbits-svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+/* Icons Styling */
+.tech-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* Pehle wale margin-left aur margin-top yahan se hata dein */
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 80px;
+    /* Width thodi badha di taaki text wrap na ho */
+    /* Is line se icon ka center point line ke axis par aa jata hai */
+    transform: translate(-50%, -50%);
+    z-index: 20 !important;
+}
+
+.tech-icon img {
+    object-fit: contain;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
+
+.innercircle {
+    width: 60px;
+    height: 60px;
+
+}
+
+.outercircle {
+    width: 70px;
+    height: 70px;
+
+}
+
+.tech-icon span {
+    font-size: 11px;
+    margin-top: 4px;
+    font-weight: 500;
+    color: #94a3b8;
+}
+
+/* Just paste this at the bottom of your CSS */
+.profile-pic-center {
+    z-index: 10 !important;
+}
+
+.tech-icon {
+    z-index: 20 !important;
+}
+
+/* Pic ko beech mein rakhne ke liye */
+.profile-pic-center,
+.center-profile,
+.profile-frame {
+    z-index: 10 !important;
+    position: absolute;
+}
+
+/* Inner icons ko pic ke niche bhejne ke liye */
+.inner {
+    z-index: 5 !important;
+}
+
+/* Outer icons ko pic ke upar lane ke liye */
+.outer {
+    z-index: 20 !important;
+}
+
+.bg-gradient-custom {
+    /* Top: #020617 (Dark) -> Mid: #0f172a -> Bottom: #1e293b (Light) */
+    background: linear-gradient(to bottom,
+            #020617 0%,
+            #0f172a 50%,
+            #1e293b 100%);
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.text-center h1 {
+    background: linear-gradient(to right, #ffffff, #e2e8f0, #94a3b8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+}
+
+.social-icon {
+    background: rgba(30, 41, 59, 0.4);
+    /* surface/40 */
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: rgba(51, 65, 85, 0.4);
+    /* surface-light/40 */
+    transform: translateY(-2px);
+}
+
+/* --- Social Icons Styling Start --- */
+.social-icon {
+    background: rgba(30, 41, 59, 0.4) !important;
+    backdrop-filter: blur(8px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    padding: 8px 18px !important;
+    border-radius: 9999px !important;
+    text-decoration: none !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    color: #94a3b8 !important;
+    /* Gray color */
+}
+
+.social-icon:hover {
+    background: rgba(59, 130, 246, 0.1) !important;
+    border-color: #3b82f6 !important;
+    color: #ffffff !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.2) !important;
+}
+
+.social-icon svg {
+    width: 20px !important;
+    height: 20px !important;
+    transition: transform 0.3s ease !important;
+    fill: currentColor !important;
+}
+
+.social-icon:hover svg {
+    transform: scale(1.1) rotate(5deg) !important;
+    fill: #3b82f6 !important;
+}
+
+/* Learn More Button color fix */
+.bg-accent {
+    background-color: #3b82f6 !important;
+}
+
+/* --- Social Icons Styling End --- */
+/* --- Learn More Button Styling --- */
+.bg-accent {
+    background-color: #3b82f6 !important;
+    /* Pure Blue */
+    color: white !important;
+    padding: 12px 28px !important;
+    border-radius: 12px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 0 4px 14px 0 #3b82f6 !important;
+}
+
+.bg-accent:hover {
+    /* Darker blue on hover */
+    transform: translateY(-4px) scale(1.02) !important;
+    box-shadow: 0 10px 20px #3b82f6 !important;
+}
+
+/* Button ke andar ka Arrow icon */
+.bg-accent svg {
+    margin-left: 8px !important;
+    transition: transform 0.3s ease !important;
+}
+
+.bg-accent:hover svg {
+    transform: translateY(3px) !important;
+    /* Hover pe arrow niche jayega */
+}
+
+/* Bounce Animation Speed Control */
+.animate-bounce {
+    animation-duration: 1.5s !important;
+}
+
+/* Bounce Animation definition */
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(-25%);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+
+    50% {
+        transform: none;
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+}
+
+/* Class to trigger animation */
+.animate-bounce {
+    animation: bounce 1s infinite !important;
+}
+
+/* 1. Icons ko line mein laane aur center karne ke liye */
+.flex-wrap.justify-center {
+    display: flex !important;
+    flex-direction: row !important;
+    /* Force icons in a horizontal line */
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 1.25rem !important;
+    /* Icons ke beech ka gap */
+    width: 100% !important;
+}
+
+/* 2. Pure block (Text + Icons + Button) ko center karne ke liye */
+.text-center {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+/* --- Learn More Button Size & Alignment Fix --- */
+.bg-accent {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    /* Size aur Shape fix */
+    padding: 10px 24px !important;
+    /* Picture 1 jaisa sleek padding */
+    border-radius: 8px !important;
+    /* Sharp se thoda rounded corners */
+
+    /* Text layout fix */
+    white-space: nowrap !important;
+    /* Text ko ek hi line mein rakhega */
+    font-size: 16px !important;
+    font-weight: 600 !important;
+
+    /* Centering logic */
+    margin: 20px auto 0 auto !important;
+    width: auto !important;
+    /* Extra width khatam karne ke liye */
+    min-width: 160px !important;
+}
+
+/* Button ke andar ka arrow size fix */
+.bg-accent svg {
+    width: 20px !important;
+    height: 20px !important;
+    margin-left: 10px !important;
+    flex-shrink: 0 !important;
+    /* Arrow ko dabne se rokega */
+}
+
+/* Container fix taaki button center mein rahe */
+.text-center {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+/* Sirf un links par line aaye jo buttons nahi hain */
+nav a:not(.contact-btn):not([class*='bg-']) {
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 4px;
+}
+
+nav a:not(.contact-btn):not([class*='bg-'])::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3b82f6; 
+    transition: width 0.3s ease-in-out;
+}
+
+nav a:not(.contact-btn):not([class*='bg-']):hover::after {
+    width: 100%;
+}
+
+
+
+/* CSS END */
