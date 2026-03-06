@@ -23,7 +23,7 @@ function App() {
           <Header></Header>
           <Outlet/>
           <Footer></Footer>
-          <h1>adadadxasdssssssssssssssssd</h1>
+          <h1>adadadxasdsssssssssssssssssd</h1>
         </div>
       </div>
     </PostListProvider>
