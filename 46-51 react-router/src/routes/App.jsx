@@ -23,7 +23,6 @@ function App() {
           <Header></Header>
           <Outlet/>
           <Footer></Footer>
-          <h1>adasdadsxasdsssssssssssssssssssd</h1>
         </div>
       </div>
     </PostListProvider>
