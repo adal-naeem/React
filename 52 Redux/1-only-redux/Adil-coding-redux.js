@@ -1,2 +1,2 @@
 const redux = require('redux');
-qwertyuiop123
+qwertyuiop12
