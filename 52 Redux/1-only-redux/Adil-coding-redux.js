@@ -1,2 +1,2 @@
 const redux = require('redux');
-qwertqwert
+qwertqwer
