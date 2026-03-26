@@ -1,1 +1,1 @@
-const redux = require('redux');s
+const redux = require('redux');
